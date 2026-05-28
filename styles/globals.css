@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #2D3436;
+  line-height: 1.6;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-primary-blue text-white font-semibold rounded-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl cursor-pointer text-lg;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-white text-primary-blue font-semibold rounded-lg border-2 border-primary-blue hover:bg-primary-light transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl cursor-pointer text-lg;
+  }
+
+  .btn-phone {
+    @apply px-6 py-3 bg-primary-blue text-white font-bold rounded-lg hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer text-base lg:text-lg whitespace-nowrap;
+  }
+
+  .section-heading {
+    @apply text-4xl lg:text-5xl font-bold text-text-dark mb-6;
+  }
+
+  .section-subheading {
+    @apply text-xl lg:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto;
+  }
+
+  .feature-card {
+    @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-primary-blue;
+  }
+
+  .service-card {
+    @apply bg-primary-light p-8 rounded-xl hover:shadow-2xl transition-all duration-300 hover:bg-blue-100;
+  }
+
+  .step-card {
+    @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center;
+  }
+}
